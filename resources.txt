@@ -1,0 +1,11 @@
+https://www.askpython.com/python/array/reverse-an-array-in-python
+https://www.programiz.com/python-programming/methods/list/index
+https://docs.python.org/3/tutorial/classes.html
+https://www.w3schools.com/python/python_inheritance.asp
+https://www.programiz.com/python-programming/json
+https://stackoverflow.com/questions/22635586/check-if-a-string-only-contains-certain-letters
+https://stackoverflow.com/questions/11800755/python-lists-finding-number-of-times-a-string-occurs
+https://pymotw.com/2/collections/counter.html
+https://www.w3schools.com/tags/att_form_method.asp
+https://www.w3schools.com/jsref/met_win_alert.asp
+https://stackoverflow.com/questions/656082/dynamically-hide-form-on-submit

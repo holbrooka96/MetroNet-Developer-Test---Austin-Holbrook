@@ -1,0 +1,58 @@
+<head>
+<title>Team Introduction</title>
+<script>
+    //Validate the name and fun fact input fields. Ensure they both have text entered into them, if not then display an alert stating they need to be filled out. Log name and funfact, and hide form then display data.
+    function validateForm() {
+        
+        //Set name and funfact variable.
+        var nameInput = document.getElementById("name").value;
+        var funFactInput = document.getElementById("funFact").value;
+        
+        //Check that they are both populated.
+        if (nameInput == "") {
+            alert("Name must be filled out");
+            return false;
+        } else if (funFactInput == "") {
+            alert("Fun fact must be filled out");
+            return false;
+        }  
+        
+        //Log to the console.
+        console.log(nameInput);
+        console.log(funFactInput);
+        
+        //Hide the intro form.
+        var introForm = document.getElementById('intro');
+        introForm.style.display = 'none';
+        
+        //Show the div that contains the entered data and the reset button.
+        var submitDiv = document.getElementById('submittedData');
+        submitDiv.style.display = 'block';
+        submitDiv.style.outline = "3px solid";
+        submitDiv.style.outlineOffset = "4px";
+        document.getElementById('nameVal').innerHTML = "My name is " + nameInput;
+        document.getElementById('funFactVal').innerHTML = funFactInput;
+    
+        //Stop the page from reloading automatically.
+        return false;
+}
+    </script>
+</head>
+
+<body>
+    <!--Introduction form that the user can enter their name, and a fun fact about themselves in. When hitting the submit button it calls the ValidateForm function to check that it is all correct.-->
+    <form id="intro" onsubmit="return validateForm()">
+ 
+        Name: <input type="text" id="name" placeholder="Name"><br><br>
+        Fun Fact: <input type="text" id="funFact" placeholder="Fun fact about you!"><br><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <!--Submitted Data div that houses the entered name and fun fact, Also contains the reset button to refresh the page.-->
+    <div id="submittedData" style="display:none;" >
+        <p><span id='nameVal'></span></p>
+        <p><span id='funFactVal'></span></p>
+        <button onClick="window.location.reload()">Reset</button>
+    </div>
+</body>
